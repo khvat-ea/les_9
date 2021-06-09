@@ -1,2 +1,5 @@
 ---
 # tasks file for prebuild_app
+
+- name: Ensure all required packages are present
+  
