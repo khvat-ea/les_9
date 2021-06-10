@@ -5,6 +5,7 @@
 
   roles:
     - prebuild
+    - build_app
 
 - name: Project preparation and launch
   hosts: prod
