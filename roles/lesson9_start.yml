@@ -4,13 +4,11 @@
   become: yes
 
   roles:
-    - prebuild
     - build_app
 
-- name: Project preparation and launch
+- name: Launch project
   hosts: prod
   become: yes
 
   roles:
-    - preprod
-    - prod_aapp
+    - prod_app
