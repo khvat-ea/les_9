@@ -1,2 +1,5 @@
 ---
 # defaults file for build_app
+boxfuse_repo_url: 'https://github.com/boxfuse/boxfuse-sample-java-war-hello.git'
+boxfuse_prj_path: /tmp/boxfuse-sample-java-war-hello
+maven_phase: package
