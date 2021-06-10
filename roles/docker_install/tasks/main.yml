@@ -1,0 +1,11 @@
+---
+# tasks file for docker_install
+- name: Ensure docker engine is present
+  apt: name={{ item }} update_cache={{ isUpdatePackages }} state={{ expectedStatePackages }}
+  with_items:
+    - docker.io
+    - python-pip
+
+- name: Ensure pip package docker-py is present
+  pip:
+    name: "{{ dockerPythonPkg }}"

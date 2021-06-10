@@ -1,2 +1,28 @@
 ---
 # tasks file for build_app
+- name: Creates directory
+  file:
+    path: "{{ src_path_docker }}"
+    state: directory
+
+- name: Copy the Dockerfile from localhost  to builder host
+  copy:
+    src: Dockerfile
+    dest: "{{ src_path_docker }}"
+  
+- name: Create test build image
+  docker_image:
+    name: "{{ docker_image_name }}"
+    path: "{{ src_path_docker }}"
+    force: yes
+  
+- name: Authenticate with repository
+  docker_login:
+    username: "{{ user_name }}"
+    email: "{{ user_email }}"
+    password: "{{ user_password }}"
+      
+- name: Push image to docker HUB
+  docker_image:
+    name: "{{ docker_image_name }}"
+    push: yes

@@ -1,2 +1,4 @@
 ---
 # vars file for build_app
+src_path_docker: /tmp/lesson_8
+docker_image_name: khvatea/web_app_boxfuse

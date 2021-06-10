@@ -1,0 +1,12 @@
+---
+- name: Build project
+  hosts: builder
+  become: yes
+  roles:
+    - build_app
+
+- name: Launch project
+  hosts: prod
+  become: yes
+  roles:
+    - prod_app

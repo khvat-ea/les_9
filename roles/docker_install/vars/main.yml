@@ -1,0 +1,5 @@
+---
+# vars file for docker_install
+isUpdatePackages: yes
+expectedStatePackages: present
+dockerPythonPkg: docker-py

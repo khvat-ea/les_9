@@ -1,2 +1,5 @@
 ---
 # vars file for prod_app
+docker_image_name: khvatea/web_app_boxfuse
+container_name: box_fuse_test
+container_port: 8099:8080

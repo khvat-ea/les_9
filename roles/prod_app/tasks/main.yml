@@ -1,2 +1,9 @@
 ---
 # tasks file for prod_app
+tasks:  
+- name: Start web application
+  docker_container:
+    name: "{{ container_name }}"
+    image: "{{ docker_image_name }}"
+    ports:
+      - "{{ container_port }}"
