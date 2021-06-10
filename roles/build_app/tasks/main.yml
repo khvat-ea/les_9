@@ -1,2 +1,16 @@
 ---
 # tasks file for build_app
+- name: Cloning a project from a git
+  git:
+    repo: {{ boxfuse_repo_url }}
+    dest: {{ boxfuse_src_path }}
+
+- name: Build a project using the maven
+  shell: cd {{ boxfuse_src_path }} && mvn {{ maven_phase }}
+
+- name: Copy artifacts from build
+  synchronize:
+    src: {{ boxfuse_src_path }}/target/hello-1.0.war
+    dest: {{ boxfuse_dest_path }}/hello-1.0.war
+    mode: pull
+  delegate_to: {{ prod_server }}
