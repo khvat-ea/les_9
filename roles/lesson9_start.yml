@@ -13,3 +13,4 @@
 
   roles:
     - preprod
+    - prod_aapp

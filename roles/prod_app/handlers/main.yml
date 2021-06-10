@@ -1,2 +1,4 @@
 ---
 # handlers file for prod_app
+- name: Tomcat verify
+  service: name=tomcat9 state=started

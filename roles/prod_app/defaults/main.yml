@@ -1,2 +1,5 @@
 ---
 # defaults file for prod_app
+src_path_prj: /tmp/boxfuse-sample-java-war-hello/target/hello-1.0.war
+dest_path_prj: /var/lib/tomcat9/webapps/hello-1.0.war
+builder_server: instance-slave-1
