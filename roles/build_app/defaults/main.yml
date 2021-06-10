@@ -1,7 +1,7 @@
 ---
 # defaults file for build_app
 boxfuse_repo_url: 'https://github.com/boxfuse/boxfuse-sample-java-war-hello.git'
-boxfuse_src_path: /tmp/boxfuse-sample-java-war-hello
-boxfuse_dest_path: /var/lib/tomcat9/webapps
-maven_phase: package
-prod_server: instance-slave-2
+boxfuse_src_path: '/tmp/boxfuse-sample-java-war-hello'
+boxfuse_dest_path: '/var/lib/tomcat9/webapps'
+maven_phase: 'package'
+prod_server: 'instance-slave-2'
