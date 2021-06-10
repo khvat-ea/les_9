@@ -1,7 +1,14 @@
 ---
-- name: Run pre-build
-  hosts: all
+- name: Preparation and assembly of the project
+  hosts: builder
   become: yes
 
   roles:
     - prebuild
+
+- name: Project preparation and launch
+  hosts: prod
+  become: yes
+
+  roles:
+    - preprod

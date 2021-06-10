@@ -1,0 +1,4 @@
+---
+# vars file for prebuild_app
+isUpdatePackages: yes
+expectedStatePackages: present
