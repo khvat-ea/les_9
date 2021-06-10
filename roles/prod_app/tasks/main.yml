@@ -1,6 +1,5 @@
 ---
-# tasks file for prod_app
-tasks:  
+# tasks file for prod_app  
 - name: Start web application
   docker_container:
     name: "{{ container_name }}"
